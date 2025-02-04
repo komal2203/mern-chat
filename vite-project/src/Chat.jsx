@@ -21,7 +21,7 @@ export default function Chat() {
   }, [])
 
   function connectToWs() {
-    const ws = new WebSocket(import.meta.env.VITE_WEBSOCKET_URL)
+    const ws = new WebSocket("wss://mern-chat-af5v.onrender.com")
     setWs(ws)
     ws.addEventListener('open', () => {
       console.log('WebSocket connected')

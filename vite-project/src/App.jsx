@@ -3,7 +3,7 @@ import { UserContextProvider } from './UserContext'
 import Routes from './Routes'
 
 function App() {
-  axios.defaults.baseURL = import.meta.env.VITE_BACKEND_URL // ✅ CORRECT for Vite
+  axios.defaults.baseURL ="https://mern-chat-af5v.onrender.com"
 
   axios.defaults.withCredentials = true
 
