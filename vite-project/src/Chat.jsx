@@ -1,5 +1,5 @@
 import { useContext, useEffect, useRef, useState } from 'react'
-// import Avatar from './Avatar.jsx'
+import Avatar from './Avatar.jsx'
 import axios from 'axios'
 import { uniqBy } from 'lodash'
 import Contact from './Contact.jsx'
@@ -21,7 +21,7 @@ export default function Chat() {
   }, [])
 
   function connectToWs() {
-    const ws = new WebSocket("wss://mern-chat-af5v.onrender.com")
+    const ws = new WebSocket(VITE_WEBSOCKET_URL)
     setWs(ws)
     ws.addEventListener('open', () => {
       console.log('WebSocket connected')
