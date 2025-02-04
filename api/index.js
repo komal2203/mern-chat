@@ -14,6 +14,7 @@ mongoose.connect(process.env.MONGO_URL);
 
 const jwtSecret = process.env.JWT_SECRET;
 const bcryptSalt = bcrypt.genSaltSync(10);
+const port = process.env.PORT || 4040;
 
 // console.log(process.env.MONGO_URL);
 const app = express();
@@ -147,7 +148,7 @@ app.post("/register", async (req, res) => {
 //     console.log("Error deleting messages:", err);
 //   });
 
-const server = app.listen(4040);
+const server = app.listen(port);
 
 const wss = new WebSocketServer({ server });
 
