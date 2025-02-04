@@ -14,7 +14,7 @@ mongoose.connect(process.env.MONGO_URL);
 
 const jwtSecret = process.env.JWT_SECRET;
 const bcryptSalt = bcrypt.genSaltSync(10);
-const port = process.env.PORT || 4040;
+const port = "https://mern-chat-af5v.onrender.com" || 4040;
 
 // console.log(process.env.MONGO_URL);
 const app = express();
