@@ -3,7 +3,7 @@ import { UserContextProvider } from './UserContext'
 import Routes from './Routes'
 
 function App() {
-  axios.defaults.baseURL =  import.meta.env.VITE_BACKEND_URL;
+  axios.defaults.baseURL =  "https://mern-chat-1-byovydozw-komal-meenas-projects.vercel.app/";
 
   axios.defaults.withCredentials = true
 
