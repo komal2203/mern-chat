@@ -24,7 +24,8 @@ app.use(cookieParser());
 app.use(
   cors({
     credentials: true,
-    origin: process.env.CLIENT_URL,
+    // origin: process.env.CLIENT_URL,
+    origin:"https://mern-chat-1-d5r2.onrender.com",
     // origin: ["http://localhost:5173", "http://localhost:5174"],
   })
 );
