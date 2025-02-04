@@ -1,5 +1,6 @@
 {
   "buildCommand": "npm install && npm run build",
   "outputDirectory": "vite-project/dist",
-  "framework": [{ "source": "/api/(.*)", "destination": "/api/index.js" }]
+  "framework": "vite",
+  "rewrites": [{ "source": "/api/(.*)", "destination": "/api/index.js" }]
 }
