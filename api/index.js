@@ -14,7 +14,7 @@ mongoose.connect(process.env.MONGO_URL);
 
 const jwtSecret = process.env.JWT_SECRET;
 const bcryptSalt = bcrypt.genSaltSync(10);
-const port = "https://mern-chat-af5v.onrender.com" || 4040;
+const port = process.env.PORT || 4040;
 
 // console.log(process.env.MONGO_URL);
 const app = express();
@@ -24,8 +24,8 @@ app.use(cookieParser());
 app.use(
   cors({
     credentials: true,
-    // origin: process.env.CLIENT_URL,
-    origin:"https://mern-chat-2-vfiq.onrender.com",
+    origin: process.env.CLIENT_URL,
+    // origin:"https://mern-chat-2-vfiq.onrender.com",
     // origin: ["http://localhost:5173", "http://localhost:5174"],
   })
 );
