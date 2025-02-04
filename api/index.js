@@ -25,7 +25,7 @@ app.use(
   cors({
     credentials: true,
     // origin: process.env.CLIENT_URL,
-    origin:"https://mern-chat-1-d5r2.onrender.com",
+    origin:"https://mern-chat-2-vfiq.onrender.com",
     // origin: ["http://localhost:5173", "http://localhost:5174"],
   })
 );
