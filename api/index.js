@@ -24,7 +24,7 @@ app.use(cookieParser());
 app.use(
   cors({
     credentials: true,
-    origin: "https://mern-chat-1-j40hxlk2f-komal-meenas-projects.vercel.app/",
+    origin: "https://chattypals.netlify.app/",
     // origin:"https://mern-chat-2-vfiq.onrender.com",
     // origin: ["http://localhost:5173", "http://localhost:5174"],
   })
