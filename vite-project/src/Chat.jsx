@@ -22,7 +22,7 @@ export default function Chat() {
 
   function connectToWs() {
     // const ws = new WebSocket(VITE_WEBSOCKET_URL)
-    const ws = new WebSocket("ws://mern-chat-4-e1wr.onrender.com");
+    const ws = new WebSocket("wss://mern-chat-4-e1wr.onrender.com");
 
     setWs(ws)
     ws.addEventListener('open', () => {
