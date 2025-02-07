@@ -22,7 +22,7 @@ export default function Chat() {
 
   function connectToWs() {
     // const ws = new WebSocket(VITE_WEBSOCKET_URL)
-    const ws = new WebSocket(import.meta.env.VITE_WEBSOCKET_URL);
+    const ws = new WebSocket("ws://mern-chat-1-byovydozw-komal-meenas-projects.vercel.app/");
 
     setWs(ws)
     ws.addEventListener('open', () => {
