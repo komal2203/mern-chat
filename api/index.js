@@ -44,11 +44,11 @@ async function getUserDataFromRequest(req) {
   });
 }
 
-app.get("/api/test", (req, res) => {
+app.get("/test", (req, res) => {
   res.json("test ok");
 });
 
-app.get("/api/messages/:userId", async (req, res) => {
+app.get("/messages/:userId", async (req, res) => {
   const { userId } = req.params;
   const userData = await getUserDataFromRequest(req);
   const ourUserId = userData.userId;
@@ -64,12 +64,12 @@ app.get("/api/messages/:userId", async (req, res) => {
   res.json(messages);
 });
 
-app.get("/api/people", async (req, res) => {
+app.get("/people", async (req, res) => {
   const users = await User.find({}, { _id: 1, username: 1 });
   res.json(users);
 });
 
-app.get("/api/profile", (req, res) => {
+app.get("/profile", (req, res) => {
   const token = req.cookies?.token;
   if (token) {
     jwt.verify(token, jwtSecret, {}, (err, userdata) => {
@@ -82,7 +82,7 @@ app.get("/api/profile", (req, res) => {
   }
 });
 
-app.post("/api/login", async (req, res) => {
+app.post("/login", async (req, res) => {
   const { username, password } = req.body;
   const foundUser = await User.findOne({ username });
   console.log(`working`);
@@ -105,11 +105,11 @@ app.post("/api/login", async (req, res) => {
   }
 });
 
-app.post("/api/logout", (req, res) => {
+app.post("/logout", (req, res) => {
   res.cookie("token", "", { sameSite: "none", secure: true }).json("ok");
 });
 
-app.post("/api/register", async (req, res) => {
+app.post("/register", async (req, res) => {
   const { username, password } = req.body;
   try {
     const hashedPassword = bcrypt.hashSync(password, bcryptSalt);
