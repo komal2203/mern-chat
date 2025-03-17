@@ -1,7 +1,7 @@
 # **ChattyPals 💬**  
 _A Real-Time Chat Application with MERN Stack_  
 
-![ChattyPals Preview](https://chattypals.netlify.app/)  
+[Live Preview](https://chattypals.netlify.app/)  
 
 ## 🚀 **About the Project**  
 ChattyPals is a **real-time chat application** built using the **MERN stack**. It allows users to seamlessly communicate with **instant messaging**, **secure authentication**, and a **responsive UI** for an engaging experience.  
@@ -22,6 +22,7 @@ ChattyPals is a **real-time chat application** built using the **MERN stack**. I
 
 ## 📸 **Screenshots**  
 _Add relevant screenshots here_  
+![Screenshot 2025-03-17 234255](https://github.com/user-attachments/assets/098480ed-1feb-4812-8a2f-02e6db7dab90)
 ![Screenshot 2025-03-17 234351](https://github.com/user-attachments/assets/cb72213b-2442-46f7-9ea2-13edf0c78180)
 
 
